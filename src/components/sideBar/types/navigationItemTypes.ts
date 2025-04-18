@@ -1,22 +1,23 @@
-import { type LucideIcon } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
 
-export interface NavBase {
-  icon: LucideIcon;
-  url: string;
-}
-
-export interface NavMain extends NavBase {
-  type: 'main'; // <-- Discriminant
+export type NavMain = {
+  type: 'main';
   name: string;
-}
-
-export interface NavWithSub extends NavBase {
-  type: 'sub'; // <-- Discriminant
-  title: string;
+  url: string;
+  icon: LucideIcon;
   isActive?: boolean;
-  items: { name: string; url: string }[];
-}
+};
 
-export type NavigationItem = NavMain | NavWithSub;
+export type NavSub = {
+  type: 'sub';
+  title: string;
+  url: string;
+  icon: LucideIcon;
+  isActive?: boolean;
+  items: {
+    name: string;
+    url: string;
+  }[];
+};
 
-export type NavigationArray = NavigationItem[];
+export type NavigationArray = (NavMain | NavSub)[];

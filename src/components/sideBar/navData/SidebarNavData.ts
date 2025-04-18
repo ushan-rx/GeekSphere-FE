@@ -1,4 +1,4 @@
-import { FileChartLine, Stethoscope, LayoutDashboard } from 'lucide-react';
+import { FileChartLine, Stethoscope, LayoutDashboard, Share2 } from 'lucide-react';
 import { NavigationArray } from '../types/navigationItemTypes';
 
 //  This contains sidebar navigation items.
@@ -9,11 +9,23 @@ import { NavigationArray } from '../types/navigationItemTypes';
 
 export const data: NavigationArray = [
   {
+    type: 'main',
+    name: 'Overview',
+    url: '/doctor',
+    icon: LayoutDashboard,
+  },
+  {
+    type: 'main',
+    name: 'Skill Sharing',
+    url: '/skillsharing',
+    icon: Share2,
+    isActive: true,
+  },
+  {
     type: 'sub',
     title: 'Reports',
     url: '',
     icon: FileChartLine,
-    isActive: true,
     items: [
       {
         name: 'Appointment Reports',
@@ -28,12 +40,6 @@ export const data: NavigationArray = [
         url: '/doctor/financial-reports',
       },
     ],
-  },
-  {
-    type: 'main',
-    name: 'Overview',
-    url: '/doctor',
-    icon: LayoutDashboard,
   },
   {
     type: 'main',

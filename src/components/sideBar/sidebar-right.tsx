@@ -21,7 +21,7 @@ const data = {
   user: {
     name: 'shadcn',
     email: 'm@example.com',
-    avatar: '/avatars/shadcn.jpg',
+    avatar: `https://ui-avatars.com/api/?name=shadcn&background=random`,
   },
   calendars: [
     {

@@ -21,7 +21,6 @@ export default function Home() {
           Welcome to the Hero UI (Next UI) + Shadcn UI Starter Project
         </p>
         <div className='flex flex-col gap-2'>
-          {/* Information Section */}
           <div className='space-y-2 rounded-lg p-4 shadow-md sm:p-8'>
             <h2 className='text-lg font-bold'>Important Information</h2>
             <ul className='list-disc pl-5 text-sm leading-6'>
@@ -52,7 +51,6 @@ export default function Home() {
             </ul>
           </div>
 
-          {/* Component Previews */}
           <div className='flex gap-8'>
             <div className='text-center'>
               <span>Shadcn Calendar</span>
@@ -77,7 +75,6 @@ export default function Home() {
                 </div>
               </Card>
             </div>
-            {/* Buttons to navigate */}
             <div className='flex flex-col gap-8'>
               <span className='text-center'>Buttons</span>
               <ButtonH color='primary'>
